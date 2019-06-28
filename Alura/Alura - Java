@@ -1,0 +1,108 @@
+Alura - Java
+-- Parte 1
+
+- Instalação
+1. Para desenvolvimento é necessário a instalação do Java JDK Kit
+
+2. Configurar às variáveis do Windows para:
+    > C:\Program Files\Java\jdk1.8.0_192\bin
+
+3. Comando de Teste de instalação Java
+	> java -version
+	> javac -version
+
+- Escrevendo Código
+1. O nome do arquivo deve ser o mesmo nome da Class principal.
+
+2. No CMD o comando "type"  exibi o código do aquivo.
+
+- Executando o Arquivo
+1. Para Compilar o arquivo:
+     > javac Programa.java
+
+2. Para Executar o programa:
+	> java Programa
+
+
+- Utilizando o Eclipse
+1. Criar Projeto
+	> New > Java Project
+
+2. Cast implícito e explícito:
+
+PARA / DE	byte	short	char	int 	long	float	double
+byte		----	Impl.	(char)	Impl.	Impl.	Impl.	Impl.
+short		(byte)	----	(char)	Impl.	Impl.	Impl.	Impl.
+char		(byte)	(short)	----	Impl.	Impl.	Impl.	Impl.
+int			(byte)	(short)	(char)	----	Impl.	Impl.	Impl.
+long		(byte)	(short)	(char)	(int)	----	Impl.	Impl.
+float		(byte)	(short)	(char)	(int)	(long)	----	Impl.
+double		(byte)	(short)	(char)	(int)	(long)	(float)	----
+
+3. Tamanho:
+
+TIPO	TAMANHO
+boolean	1 bit
+byte	1 byte
+short	2 bytes
+char	2 bytes
+int		4 bytes
+float	4 bytes
+long	8 bytes
+double	8 bytes
+
+4. CTRL + Espaço
+	> main
+		public static void main (String[] args) {
+		}
+
+	>sysout
+		System.out.println();
+
+5. Format
+  CTRL + SHIFT + F
+
+6. Condicional(and &&, or ||)
+	> IF
+	if (Condicional) {
+	}  
+	else {
+	}
+
+	> SWITCH
+	switch (Condicional) {
+    case opção1:
+            comando(s) caso a opção 1 tenha sido escolhida
+            break;
+    default:
+            comando(s) caso nenhuma das opções anteriores tenha sido escolhida
+	}
+
+	> WHILE
+	while (Condicional) {
+		//contador += 1; || contador++;
+	}
+
+	> FOR
+	for (int Contador == 0; Contador <= 10; Contador++){
+	}
+	
+7. OutLine
+	CTRL + O
+
+-- Parte 5
+
+aula 5 - 1
+
+-- java.lang
+
+System.out.println()
+
+> System
+	classe, java.lang, public;
+
+> out
+	atributo, public, static, referencia;
+
+>println
+	metodo, public, não static, sobrecarga, não retorna execeções do tipo checked;

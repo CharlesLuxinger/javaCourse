@@ -1,0 +1,41 @@
+package application;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Locale;
+import java.util.Scanner;
+
+import entities.Emplyoee;
+
+public class Program {
+	public static void main(String[] args) {
+		List<Emplyoee> employees = new ArrayList<Emplyoee>(); 
+		int numberEmployes;
+		
+		Locale.setDefault(Locale.US);
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.print("How many emplyoees will be registered? ");
+		numberEmployes = sc.nextInt();
+		
+		for (int x = 0; x < numberEmployes; x++ ) {
+			System.out.println("Enter employee id number: ");
+			employees.add(sc.nextInt());
+		}
+		
+		
+		
+		sc.close();
+	}
+}
+
+/*
+ * • Tamanho da lista: size() • Obter o elemento de uma posição: get(position) •
+ * Inserir elemento na lista: add(obj), add(int, obj) • Remover elementos da
+ * lista: remove(obj), remove(int), removeIf(Predicate) • Encontrar posição de
+ * elemento: indexOf(obj), lastIndexOf(obj) • Filtrar lista com base em
+ * predicado: List<Integer> result = list.stream().filter(x -> x >
+ * 4).collect(Collectors.toList()); • Encontrar primeira ocorrência com base em
+ * predicado: Integer result = list.stream().filter(x -> x >
+ * 4).findFirst().orElse(null);
+ */

@@ -1,0 +1,12 @@
+package course;
+
+public class ProgramInit {
+
+	public static void main(String[] args) {
+		double price = 400.0;
+		
+		System.out.println(price);
+
+	}
+
+}

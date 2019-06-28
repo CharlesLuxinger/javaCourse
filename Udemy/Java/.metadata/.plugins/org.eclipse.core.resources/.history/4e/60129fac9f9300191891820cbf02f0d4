@@ -1,0 +1,11 @@
+package entities;
+
+public class Circle {
+	
+	public static final double PI = 3.14159;
+	
+	publi static double circuference(double radius) {
+		return 2.0*PI*radius;
+	}
+
+}

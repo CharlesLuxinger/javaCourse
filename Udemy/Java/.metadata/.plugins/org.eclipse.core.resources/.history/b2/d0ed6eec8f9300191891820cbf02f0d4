@@ -1,0 +1,15 @@
+package application;
+
+public class Triangle {
+
+	public double a;
+	public double b;
+	public double c;
+
+	public static double calcArea(Triangle aux) {
+		double p = (aux.a + aux.b + aux.c) / 2.0;
+
+		return Math.sqrt(p * (p - aux.a) * (p - aux.b) * (p - aux.c));
+
+	}
+}

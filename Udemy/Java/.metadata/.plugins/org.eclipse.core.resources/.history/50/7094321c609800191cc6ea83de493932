@@ -1,0 +1,28 @@
+package application;
+
+public class Program {
+	public static void main(String[] args) {
+		String[] vect = new String[] { "Maria", "Bob", "Alex" };
+
+		for (int i = 0; i < vect.length; i++) {
+			System.out.println(vect[i]);
+		}
+
+		// FOR EACH
+		for (String obj : vect) {
+			System.out.println(obj);
+		}
+	}
+}
+
+/*
+ * 	• Tamanho da lista: size()
+   	• Obter o elemento de uma posição: get(position)
+	• Inserir elemento na lista: add(obj), add(int, obj)
+	• Remover elementos da lista: remove(obj), remove(int), removeIf(Predicate)
+	• Encontrar posição de elemento: indexOf(obj), lastIndexOf(obj)
+	• Filtrar lista com base em predicado:
+	List<Integer> result = list.stream().filter(x -> x > 4).collect(Collectors.toList());
+	• Encontrar primeira ocorrência com base em predicado:
+		Integer result = list.stream().filter(x -> x > 4).findFirst().orElse(null);
+ * */

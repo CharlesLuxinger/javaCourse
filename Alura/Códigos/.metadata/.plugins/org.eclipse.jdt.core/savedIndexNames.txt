@@ -1,0 +1,2 @@
+INDEX VERSION 1.131+E:\Google Drive\Sistema de Informação\Cursos de Extensão\Java\Alura\Códigos\.metadata\.plugins\org.eclipse.jdt.core
+3286157646.index

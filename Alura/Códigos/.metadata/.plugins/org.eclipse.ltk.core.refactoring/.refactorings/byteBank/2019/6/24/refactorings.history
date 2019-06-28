@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename local variable &apos;contaMarcela&apos; in &apos;byteBank.TestaMetodo.main(...)&apos; to &apos;contaJoao&apos;&#x0D;&#x0A;- Original project: &apos;byteBank&apos;&#x0D;&#x0A;- Original element: &apos;byteBank.TestaMetodo.main(String[]).contaMarcela&apos;&#x0D;&#x0A;- Renamed element: &apos;contaMarcela&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename local variable &apos;contaMarcela&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src&lt;byteBank{TestaMetodo.java[TestaMetodo~main~\[QString;@contaMarcela!131!163!137!148!QConta;!0!false" name="contaJoao" references="true" stamp="1560304112668" version="1.0"/>
+</session>

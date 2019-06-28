@@ -1,0 +1,47 @@
+package entities;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Products {
+
+	private String name;
+	private double price;
+	private int quantity;
+
+	public double totalValueInStock() {
+		return price * (double) quantity;
+	}
+
+	public void addProducts(int quantity) {
+		this.quantity += quantity;
+	}
+
+	public void removeProducts(int quantity) {
+		this.quantity -= quantity;
+	}
+
+	public void getDataProducts() {
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter product name: ");
+		System.out.print("Name:");
+		this.setName(sc.nextLine());
+
+		System.out.print("Price:");
+		this.price = sc.nextDouble();
+
+		System.out.print("Quantity:");
+		this.quantity = sc.nextInt();
+		sc.close();
+
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+}

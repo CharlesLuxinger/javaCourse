@@ -1,0 +1,10 @@
+package course2;
+
+public class ProgramTriangulo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
