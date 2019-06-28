@@ -8,7 +8,7 @@ import java.util.Date;
 
 public class Program2 {
 	public static void main(String[] args) throws ParseException {
-
+		//Date Manipulation #2
 		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
 		
 		Date d = Date.from(Instant.parse("2018-06-25T15:42:07Z"));
