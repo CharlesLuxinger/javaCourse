@@ -6,8 +6,4 @@ public enum OrderStatus {
 	SHIPPED,
 	DELIVERED;
 
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> b346eb49d4b56b2556f097e17411edf978ce128f
