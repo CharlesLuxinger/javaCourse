@@ -1,0 +1,16 @@
+package application;
+
+import entities.BusinessAccount;
+
+public class Program {
+
+	public static void main(String[] args) {
+		//Estudo Herança
+		
+		BusinessAccount account = new BusinessAccount();
+		
+		account.getBalance();
+
+	}
+
+}
