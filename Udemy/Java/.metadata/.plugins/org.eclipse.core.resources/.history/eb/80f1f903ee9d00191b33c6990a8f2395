@@ -1,0 +1,18 @@
+package entities;
+
+public class SavingAccount extends Account {
+	
+	private Double interestRate;
+
+	public SavingAccount() {
+		super();
+	}
+
+	public SavingAccount(Double interestRate) {
+		super();
+		this.interestRate = interestRate;
+	}
+	
+	
+
+}

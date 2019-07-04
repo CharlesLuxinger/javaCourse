@@ -1,0 +1,24 @@
+package application;
+
+import entities.Account;
+import entities.BusinessAccount;
+
+public class Program {
+
+	public static void main(String[] args) {
+		/*• Upcasting
+			• Casting da subclasse para superclasse
+			• Uso comum: polimorfismo
+		
+		  • Downcasting
+			• Casting da superclasse para subclasse
+			• Palavra instanceof
+			• Uso comum: métodos que recebem parâmetros genéricos (ex: Equals)
+		 */
+		
+		Account acc = new Account(1234, "Charles Luxinger", 1000.11)
+		
+
+	}
+
+}
