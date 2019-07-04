@@ -1,0 +1,18 @@
+package applicantion;
+
+import entities.Account;
+import entities.BusinessAccount;
+import entities.SavingAccount;
+
+public class Program {
+
+	public static void main(String[] args) {
+			
+		Account x = new Account(1020, "Alex", 1000.0);
+		Account y = new SavingAccount(1021, "Manuel", 1000.0, 0.01);
+		
+		x.withDraw(50.0);
+		y.withDraw(50.0);
+	}
+
+}

@@ -1,0 +1,10 @@
+package entities;
+
+public final class SavingsAccountPlus extends SavingAccount {
+	
+	@Override
+	public void withDraw(double amount) {
+		balance -= amount;
+	}
+
+}
