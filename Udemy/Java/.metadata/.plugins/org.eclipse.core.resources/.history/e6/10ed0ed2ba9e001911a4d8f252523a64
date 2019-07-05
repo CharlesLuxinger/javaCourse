@@ -1,0 +1,19 @@
+package entities;
+
+import java.util.Date;
+
+public class UsedProduct extends Product{
+	
+	private Date manufactureDate;
+	
+	public UsedProduct(String name, Double price, Date manufactureDate) {
+		super(name + "(used)", price);
+		this.manufactureDate = manufactureDate;
+	}
+
+	@Override
+	public final void priceTag() {
+		System.out.println(" (Manufacture date: $" + String.format("dd/MM/yyyy", this.manufactureDate) + ")");
+	}
+
+}
