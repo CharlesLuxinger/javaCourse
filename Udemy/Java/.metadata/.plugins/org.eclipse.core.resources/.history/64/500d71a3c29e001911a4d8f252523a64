@@ -1,0 +1,8 @@
+package entities;
+
+import entities.enums.Color;
+
+public class Shape {
+	private Color color;
+
+}

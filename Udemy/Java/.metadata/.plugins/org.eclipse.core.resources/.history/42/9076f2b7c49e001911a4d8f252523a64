@@ -1,0 +1,49 @@
+package application;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+import entities.Rectangle;
+import entities.enums.Color;
+
+public class Program {
+
+	public static void main(String[] args) {
+		/*Métodos abstratos
+			• São métodos que não possuem implementação.
+			• Métodos precisam ser abstratos quando a classe é genérica demais para conter sua
+			implementação.
+			• Se uma classe possuir pelo menos um método abstrato, então esta classe também é abstrata.
+			• Notação UML: itálico.
+		 */
+	
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+		
+		List<Shape> list = new ArrayList()<Shape>;
+	
+		System.out.print("Enter the numer of shapes: ");
+		int n = sc.nextInt();
+		
+		for (int i = 1; i<=n, i++) {
+			System.out.println("Shape #" + i + " data: ");
+			System.out.print("Rectangle or Circle(r/c): ");
+			char ch = sc.next().charAt(0);
+			System.out.print("Color (Black/Red/Green): ");
+			Color color = Color.valueOf(sc.next().toUpperCase());
+			
+			if (ch == 'r') {
+				System.out.print("Width: ");
+				double width = sc.nextDouble();
+				System.out.println("Height: ");
+				double height = sc.nextDouble();
+							
+				Rectangle shp = new Rectangle(color, width, height);
+				shp.
+			}
+		}
+		
+		sc.close();
+	}
+
+}
