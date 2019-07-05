@@ -1,0 +1,43 @@
+package applicantion;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import entities.Account;
+import entities.BusinessAccount;
+import entities.SavingAccount;
+
+public class Program {
+
+	public static void main(String[] args) {
+			/*Classes abstratas
+				• São classes que não podem ser instanciadas
+				• É uma forma de garantir herança total: somente subclasses não
+				abstratas podem ser instanciadas, mas nunca a superclasse abstrata
+				
+			  Notação UML: Classe em Itálico
+			*/
+		
+		//Account acc1 = new Account(1001, "Alex", 1000.0);  Não pode ser instanciadas
+		Account acc2 = new SavingAccount(1002, "Manuel", 1000.0, 0.01);
+		Account acc3 = new BusinessAccount(1003, "João", 1000.0, 500.0);
+		
+		Account acc4 = new SavingAccount(1004, "Felipe", 100.0, 0.02);
+		Account acc5 = new BusinessAccount(1005, "Carla", 5000.0, 400.0);
+		
+		
+		List <Account> list = new ArrayList<Account>();
+		list.add(acc2);
+		list.add(acc3);
+		list.add(acc4);
+		list.add(acc5);
+		
+		double sum = 0;
+		for(Account acc : list) {
+			sum+= acc.getBalance();
+		}
+		
+		System.out.println("Total Balance: %.2f%n", sum);
+	}
+
+}
