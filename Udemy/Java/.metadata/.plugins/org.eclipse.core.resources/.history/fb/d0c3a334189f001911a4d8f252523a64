@@ -1,0 +1,48 @@
+package application;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Locale;
+import java.util.Scanner;
+
+import entities.Pessoa;
+
+public class Program {
+
+	public static void main(String[] args) {
+		/* Exercício Classes e Métodos abstratos */
+
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+		
+		List <Pesssoa> list = new ArrayList<Pessoa>();
+
+		System.out.print("Enter the numbe of tax payers: ");
+		int n = sc.nextInt();
+
+		for (int i = 1; i <= n; i++) {
+			System.out.println("Tax payer #" + i + " data:");
+			System.out.print("Indivial or Company(i/c): ");
+			char ch = sc.nextLine().charAt(0);
+			System.out.print("Name: ");
+			String name = sc.next();
+			System.out.print("Anual Income: ");
+			double anualIcome = sc.nextDouble();
+			if (ch == 'i') {
+				System.out.print("Health expenditures: ");
+				double healthExpenditures = sc.nextDouble();
+				
+				
+				
+			} else {
+				System.out.print("Health expenditures: ");
+				double healthExpenditures = sc.nextDouble();
+			}
+			System.out.println();
+		}
+
+		sc.close();
+
+	}
+
+}

@@ -1,0 +1,19 @@
+package application;
+
+import java.util.Locale;
+
+import com.sun.tools.javac.parser.Scanner;
+
+public class Program {
+
+	public static void main(String[] args) {
+		/* Exercício Classes e Métodos abstratos */
+		
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+		
+		sc
+		
+	}
+
+}
