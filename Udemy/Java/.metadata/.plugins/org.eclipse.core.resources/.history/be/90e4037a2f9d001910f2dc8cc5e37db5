@@ -1,8 +1,0 @@
-package entities;
-
-import java.util.Date;
-
-public class OrderItem {
-	private Date moment = new Date();
-	private 
-}
