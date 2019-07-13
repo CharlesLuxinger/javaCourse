@@ -6,7 +6,6 @@ import java.util.List;
 public class Program {
 
 	public static void main(String[] args) {
-		// <?> Tipo curinga
 		List<Integer> myInts = Arrays.asList(5, 2, 10);
 		printList(myInts);
 		
@@ -14,7 +13,8 @@ public class Program {
 		printList(myStr);
 
 	}
-
+	
+	// <?> Tipo curinga -- Não é possível adicionar itens a lista curingas
 	public static void printList(List<?> list) {
 		for (Object obj : list) {
 			System.out.println(obj);
