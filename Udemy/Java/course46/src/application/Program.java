@@ -1,0 +1,40 @@
+package application;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
+import entities.Product;
+import services.CalculationService;
+
+public class Program {
+
+	public static void main(String[] args) {
+
+		List<Product> list = new ArrayList<Product>();
+
+		String path = "C:\\temp\\in.txt";
+
+		try (BufferedReader br = new BufferedReader(new FileReader(path))) {
+
+			String line;
+
+			while ((line = br.readLine()) != null) {
+				String[] fields = line.split(",");
+				String name = fields[0];
+				Double price = Double.parseDouble(fields[1]);
+								
+				list.add(new Product(name, price));
+			}
+
+			Product x = CalculationService.max(list);
+			System.out.println("Max: \n" + x);
+
+		} catch (IOException ioe) {
+			System.out.println("IO Error: " + ioe.getMessage());
+		}
+	}
+
+}
