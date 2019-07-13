@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
+	<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+		<item value="E:\Google Drive\Sistema de Informação\Cursos de Extensão\Java\Udemy\Java\course25"/>
+		<item value="E:\Google Drive\Sistema de Informação\Cursos de Extensão\Java\Udemy\Java\courseInitial"/>
+	</list>
 	<section name="ExternalProjectImportWizard">
 		<item key="WizardProjectsImportPage.STORE_NESTED_PROJECTS" value="false"/>
 		<item key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID" value="false"/>
