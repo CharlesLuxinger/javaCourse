@@ -39,8 +39,15 @@ public class Program {
 
 		// Utilizando Função Anonima(Arrow Function) Lambda
 		Comparator<Product> comp2 = (p1, p2) -> p1.getName().toUpperCase().compareTo(p2.getName().toUpperCase());
-		
+
 		list.sort(comp2);
+
+		for (Product p : list) {
+			System.out.println(p);
+		}
+
+		// Utilizando Função Anonima(Arrow Function) Lambda -- RESUMIDO
+		list.sort((p1, p2) -> p1.getName().toUpperCase().compareTo(p2.getName().toUpperCase()));
 
 		for (Product p : list) {
 			System.out.println(p);
