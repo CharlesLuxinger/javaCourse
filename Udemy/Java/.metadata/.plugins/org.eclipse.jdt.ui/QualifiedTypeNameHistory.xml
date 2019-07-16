@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="boardgame.BoardException"/>
-    <fullyQualifiedTypeName name="java.lang.RuntimeException"/>
-    <fullyQualifiedTypeName name="java.util.InputMismatchException"/>
     <fullyQualifiedTypeName name="java.util.stream.Collector"/>
     <fullyQualifiedTypeName name="com.sun.tools.javac.code.Attribute.Array"/>
     <fullyQualifiedTypeName name="java.util.Arrays"/>
     <fullyQualifiedTypeName name="chess.ChessPosition"/>
-    <fullyQualifiedTypeName name="java.util.stream.Collectors"/>
     <fullyQualifiedTypeName name="chess.ChessException"/>
     <fullyQualifiedTypeName name="application.UI"/>
     <fullyQualifiedTypeName name="chess.pieces.Pawn"/>
@@ -40,12 +36,10 @@
     <fullyQualifiedTypeName name="entities.Shape"/>
     <fullyQualifiedTypeName name="sun.net.www.content.text.plain"/>
     <fullyQualifiedTypeName name="devices.Device"/>
-    <fullyQualifiedTypeName name="java.lang.String"/>
     <fullyQualifiedTypeName name="java.lang.Override"/>
     <fullyQualifiedTypeName name="devices.Printer"/>
     <fullyQualifiedTypeName name="devices.Scanner"/>
     <fullyQualifiedTypeName name="devices.ComboDevice"/>
-    <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="java.io.BufferedReader"/>
     <fullyQualifiedTypeName name="java.io.FileReader"/>
@@ -60,4 +54,10 @@
     <fullyQualifiedTypeName name="entities.BrazilInterestService"/>
     <fullyQualifiedTypeName name="entities.USAInterestService"/>
     <fullyQualifiedTypeName name="entities.InterestService"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="java.lang.Long"/>
+    <fullyQualifiedTypeName name="java.util.stream.Stream"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="java.lang.Integer"/>
+    <fullyQualifiedTypeName name="java.util.stream.Collectors"/>
 </qualifiedTypeNameHistroy>
