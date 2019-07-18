@@ -70,8 +70,8 @@ public class DB {
 			}
 		}
 	}
-
-	// Método auxiliar para Rollback
+	
+	// Método auxiliar para Rollback 
 	public static void rollBack(Connection conn, String msg) {
 		if (conn != null) {
 			try {
