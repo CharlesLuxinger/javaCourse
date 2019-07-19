@@ -1,6 +1,5 @@
 package application;
 
-import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 
@@ -52,6 +51,11 @@ public class Program {
 		sellerDao.update(seller);
 		seller = sellerDao.findById(1);
 		System.out.println("Updated: " + seller);
+		
+		System.out.println();
+		//Delete Test
+		int del = sellerDao.deleteById(8);
+		System.out.println("Deleted: " + del + " row!!!");
 		
 	}
 }
