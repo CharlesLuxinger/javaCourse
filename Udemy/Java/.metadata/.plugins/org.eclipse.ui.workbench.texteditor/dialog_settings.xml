@@ -6,8 +6,9 @@
 		<item key="incremental" value="false"/>
 		<item key="wrap" value="true"/>
 		<item key="wholeword" value="false"/>
-		<item key="selection" value="Enter"/>
+		<item key="selection" value="Department"/>
 		<list key="findhistory">
+			<item value="Seller"/>
 			<item value="enter"/>
 			<item value="replacePromotedPiece"/>
 			<item value="Pawn(board, Color.black));"/>
@@ -22,9 +23,9 @@
 			<item value="King"/>
 			<item value="2"/>
 			<item value="1"/>
-			<item value="white"/>
 		</list>
 		<list key="replacehistory">
+			<item value="Department"/>
 			<item value="Pawn(board, Color.BLACK, this));"/>
 			<item value="Pawn(board, Color.WHITE, this));"/>
 			<item value=", Color.WHITE, this));"/>

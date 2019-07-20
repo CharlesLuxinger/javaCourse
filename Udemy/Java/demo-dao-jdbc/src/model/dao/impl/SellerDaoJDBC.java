@@ -86,7 +86,7 @@ public class SellerDaoJDBC implements SellerDao {
 	}
 
 	@Override
-	public Integer deleteById(Integer id) {
+	public void deleteById(Integer id) {
 		PreparedStatement st = null;
 
 		try {
@@ -99,8 +99,6 @@ public class SellerDaoJDBC implements SellerDao {
 			if (rowsAffected == 0) {
 				throw new DBException("ID not found!!!");
 			}
-			
-			return rowsAffected;
 
 		} catch (SQLException sqle) {
 			throw new DBException(sqle.getMessage());

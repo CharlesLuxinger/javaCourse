@@ -54,8 +54,8 @@ public class Program {
 		
 		System.out.println();
 		//Delete Test
-		int del = sellerDao.deleteById(8);
-		System.out.println("Deleted: " + del + " row!!!");
+		sellerDao.deleteById(8);
+		System.out.println("Deleted row!!!");
 		
 	}
 }
