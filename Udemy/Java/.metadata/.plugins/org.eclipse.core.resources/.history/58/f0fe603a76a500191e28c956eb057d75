@@ -1,0 +1,16 @@
+package model.services;
+
+public class PayPal implements ServicoPagamento{
+	private static final double JUROS_POR_MES = 0.01;  
+	private static final double TAXA_POR_PAGAMENTO = 0.02;
+	
+	@Override
+	public double taxaPagamento(double valorContrato) {
+		return valorContrato * TAXA_POR_PAGAMENTO;
+	}
+	
+	@Override
+	public double parcela (double valorContrato, int numeroParcela) {
+		return valorContrato * JUROS_POR_MES * numeroParcela;
+	}
+}

@@ -1,0 +1,21 @@
+package model.services;
+
+import model.entities.Contrato;
+
+public class Parcelas {
+	
+	private ServicoPagamento servicoPagamento;
+	
+	public Parcelas (ServicoPagamento servicoPagamento) {
+		this.servicoPagamento = servicoPagamento;
+	}
+	
+	public void processaContrato (Contrato contrato, int numeroParcelas) {
+		double quotaInicial = contrato.getValor() / (double)numeroParcelas;
+		
+		for (int i = 1; i <= numeroParcelas; i++) {
+			Date date = addMonths(contrato.getData(), i);
+		}
+	}
+
+}

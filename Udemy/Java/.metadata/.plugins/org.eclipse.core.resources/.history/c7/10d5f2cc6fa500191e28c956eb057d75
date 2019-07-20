@@ -1,0 +1,17 @@
+package model.entities;
+
+import java.util.Date;
+
+public class Contrato {
+	private Integer numero;
+	private Date data;
+	private Double valor;
+	
+	public Contrato(Integer numero, Date data, Double valor) {
+		this.numero = numero;
+		this.data = data;
+		this.valor = valor;
+	}
+	
+	
+}

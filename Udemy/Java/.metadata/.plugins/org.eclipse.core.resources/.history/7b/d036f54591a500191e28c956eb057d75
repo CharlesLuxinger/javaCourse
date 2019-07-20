@@ -1,0 +1,12 @@
+package entities;
+
+public class BrazilInterestService {
+	private Double tax;
+
+	public BrazilInterestService(Double tax) {
+		this.tax = tax;
+	}
+	
+	
+
+}

@@ -1,0 +1,13 @@
+package model.services;
+
+public class PayPal implements ServicoPagamento{
+	private static final double jurosPorMes = 0.01;  
+	private static final double taxaPorPagamento = 0.02;
+	
+	public double[] valorParcela(int quantidade, double valorContrato) {
+		double[] valorParcelas;
+		
+		
+		return valorParcelas[];
+	}
+}

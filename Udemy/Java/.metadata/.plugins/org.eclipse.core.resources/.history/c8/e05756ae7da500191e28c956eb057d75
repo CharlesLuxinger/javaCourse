@@ -1,0 +1,12 @@
+package application;
+
+import devices.Printer;
+
+public class Program {
+
+	public static void main(String[] args) {
+		Printer p = new Printer("1080");
+	
+	}
+
+}

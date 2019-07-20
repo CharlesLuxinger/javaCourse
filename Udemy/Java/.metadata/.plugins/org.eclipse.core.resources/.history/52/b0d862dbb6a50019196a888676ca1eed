@@ -1,0 +1,14 @@
+package application;
+
+public class Program {
+
+	public static void main(String[] args) {
+		
+		/*  Generics 
+		 	• Generics permitem que classes, interfaces e métodos possam ser parametrizados por tipo.
+		 */
+		
+	
+	}
+
+}

@@ -1,0 +1,25 @@
+package application;
+
+import java.text.SimpleDateFormat;
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Program {
+
+	public static void main(String[] args) {
+		Locale.setDefault(Locale.US);
+		
+		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+		
+		Scanner sc = new Scanner(System.in);
+	
+		System.out.println("Infome os dados do contrato: ");
+		System.out.print("Número: ");
+		int numero = sc.nextInt();
+		System.out.print("Data: ");
+		Date data = sdf.parse(sc.nextLine());
+		
+		sc.close();
+	}
+
+}

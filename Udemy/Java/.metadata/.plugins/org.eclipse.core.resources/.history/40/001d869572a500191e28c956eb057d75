@@ -1,0 +1,5 @@
+package model.services;
+
+public interface ServicoPagamento {
+	double valorParcela[](int quantidade, double valorContrato);
+}

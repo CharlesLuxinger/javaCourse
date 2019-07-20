@@ -1,0 +1,33 @@
+package model.services;
+
+import java.util.Calendar;
+import java.util.Date;
+
+import model.entities.Contrato;
+
+public class Parcelas {
+	
+	private ServicoPagamento servicoPagamento;
+	
+	public Parcelas (ServicoPagamento servicoPagamento) {
+		this.servicoPagamento = servicoPagamento;
+	}
+	
+	public void processaContrato (Contrato contrato, int numeroParcelas) {
+		double quotaInicial = contrato.getValor() / (double)numeroParcelas;
+		
+		for (int i = 1; i <= numeroParcelas; i++) {
+			Date date = addMonths(contrato.getData(), i);
+			double quotaAtualizada = quotaInicial + servicoPagamento.parcela(quotaInicial, i);
+			double quotaFinal = quotaAtualizada + servicoPagamento.taxaPagamento(quotaAtualizada);
+		}
+	}
+	
+	private Date addMonths(Date data, int n) {
+		Calendar cal  = Calendar.getInstance();
+		cal.setTime(data);
+		cal.add(Calendar.MONTH, n);
+		return cal.getTime();
+	}
+
+}

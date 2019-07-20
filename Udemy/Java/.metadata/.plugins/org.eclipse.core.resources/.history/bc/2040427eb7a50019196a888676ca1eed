@@ -1,0 +1,14 @@
+package model.services;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class PrintService {
+	
+	private List<Integer> list = new ArrayList<Integer>();
+	
+	public voic addValue(Integer value) {
+		list.add(value);
+	}
+
+}

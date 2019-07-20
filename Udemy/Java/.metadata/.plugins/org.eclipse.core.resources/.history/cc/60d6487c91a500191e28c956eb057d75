@@ -1,0 +1,16 @@
+package entities;
+
+public class BrazilInterestService {
+	private Double interestRate;
+
+	public BrazilInterestService(Double interestRate) {
+		this.interestRate = interestRate;
+	}
+	
+	public Double payment(Double amount, int months) {
+		if (months < 1) {
+			throw InvalidParameterException ("Months must be greater than zero!!!");
+		}
+	}
+	
+}

@@ -1,0 +1,6 @@
+package entities;
+
+public interface InterestService {
+	double getInterestRated();
+	double payment(double amount, int months);
+}

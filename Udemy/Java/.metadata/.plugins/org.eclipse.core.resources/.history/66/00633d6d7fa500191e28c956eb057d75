@@ -1,0 +1,11 @@
+package devices;
+
+public class ComboDevice extends Device implements Printer, Scanner{
+
+	public ComboDevice(String serialNumber) {
+		super(serialNumber);
+		// TODO Auto-generated constructor stub
+	}
+	
+}
+
