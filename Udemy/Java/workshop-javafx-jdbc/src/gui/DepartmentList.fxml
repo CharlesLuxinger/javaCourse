@@ -27,10 +27,11 @@
             <Button mnemonicParsing="false" prefWidth="142.0" text="Button" />
         </items>
       </ToolBar>
-      <TableView fx:id="tableViewDepartament" prefHeight="304.0" prefWidth="600.0">
+      <TableView fx:id="tableViewDepartament" prefHeight="304.0" prefWidth="502.0">
         <columns>
-          <TableColumn fx:id="tableColumnId" prefWidth="75.0" text="ID" />
-          <TableColumn fx:id="tableColumnName" prefWidth="524.0" text="Name" />
+          <TableColumn fx:id="tableColumnId" prefWidth="75.0" resizable="false" text="ID" />
+          <TableColumn fx:id="tableColumnName" maxWidth="481.0" prefWidth="475.0" resizable="false" text="Name" />
+            <TableColumn fx:id="tableColumnEdit" minWidth="0.0" prefWidth="49.0" resizable="false" />
         </columns>
       </TableView>
    </children>
