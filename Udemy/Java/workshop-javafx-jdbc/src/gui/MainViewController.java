@@ -6,8 +6,6 @@ import java.util.ResourceBundle;
 
 import application.Main;
 import gui.util.Alerts;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -30,13 +28,13 @@ public class MainViewController implements Initializable {
 	private MenuItem menuItemAbout;
 
 	@FXML
-	private Hyperlink hyperLinkLinkedIn;
+	private Hyperlink hyperlinkLinkedin;
 
 	@FXML
-	private Hyperlink hyperLinkGitHub;
+	private Hyperlink hyperlinkGitHub;
 
 	@FXML
-	private Hyperlink hyperLinkEmail;
+	private Hyperlink hyperlinkEmail;
 
 	@FXML
 	public void onMenuItemSellerAction() {
@@ -45,7 +43,7 @@ public class MainViewController implements Initializable {
 
 	@FXML
 	public void onMenuItemDepartmentAction() {
-		System.out.println("Department");
+		loadView("/gui/DepartamentList.fxml");
 	}
 
 	@FXML
@@ -60,18 +58,18 @@ public class MainViewController implements Initializable {
 	}
 
 	@FXML
-	public Hyperlink onHyperLinkLinkedInAction() {
-		return hyperLinkLinkedIn = new Hyperlink("https://www.linkedin.com/in/charlesluxinger/");
+	public void onHyperlinkLinkedinAction() {
+		hyperlinkLinkedin = new Hyperlink("https://www.linkedin.com/in/charlesluxinger/");
 	}
 
 	@FXML
-	public void onHyperLinkGitHubAction() {
-		hyperLinkGitHub = new Hyperlink("https://github.com/CharlesLuxinger");
+	public void onHyperlinkGitHubAction() {
+		hyperlinkGitHub = new Hyperlink("https://github.com/CharlesLuxinger");
 	}
 
 	@FXML
-	public void onHyperLinkEmailAction() {
-		hyperLinkEmail = new Hyperlink("charlesluxinger@gmail.com");
+	public void onHyperlinkEmailAction() {
+		hyperlinkEmail = new Hyperlink("charlesluxinger@gmail.com");
 	}
 
 	private synchronized void loadView(String absoluteName) {
@@ -91,5 +89,4 @@ public class MainViewController implements Initializable {
 			Alerts.showAlert("IOExcetion", "Error loading view!", e.getMessage(), AlertType.ERROR);
 		}
 	}
-
 }

@@ -6,7 +6,6 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
 <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.MainViewController">
    <children>
       <Label text="About:">
@@ -30,17 +29,17 @@
             <Insets left="20.0" />
          </padding>
       </Label>
-      <Hyperlink fx:id="hyperLinkLinkedIn" onAction="#onHyperLinkLinkedInAction" text="https://www.linkedin.com/in/charlesluxinger/">
+      <Hyperlink fx:id="hyperlinkLinkedin" onAction="#onHyperlinkLinkedinAction" text="https://www.linkedin.com/in/charlesluxinger/">
          <padding>
             <Insets left="20.0" />
          </padding>
       </Hyperlink>
-      <Hyperlink fx:id="hyperLinkGitHub" onAction="#onHyperLinkGitHubAction" text="https://github.com/CharlesLuxinger">
+      <Hyperlink fx:id="hyperlinkGitHub" onAction="#onHyperlinkGitHubAction" text="https://github.com/CharlesLuxinger">
          <padding>
             <Insets left="20.0" />
          </padding>
       </Hyperlink>
-      <Hyperlink fx:id="hyperLinkEmail" onAction="#onHyperLinkEmailAction" text="charlesluxinger@gmail.com">
+      <Hyperlink fx:id="hyperlinkEmail" onAction="#onHyperlinkEmailAction" text="charlesluxinger@gmail.com">
          <padding>
             <Insets left="20.0" />
          </padding>
