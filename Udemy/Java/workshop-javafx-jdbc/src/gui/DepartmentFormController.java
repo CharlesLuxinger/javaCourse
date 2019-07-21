@@ -8,7 +8,7 @@ import java.util.ResourceBundle;
 import java.util.Set;
 
 import db.DBException;
-import gui.listener.DataChangedListener;
+import gui.listener.DataChangeListener;
 import gui.util.Alerts;
 import gui.util.Constraints;
 import gui.util.Utils;
@@ -28,7 +28,7 @@ public class DepartmentFormController implements Initializable {
 
 	private DepartmentService service;
 
-	private List<DataChangedListener> dataChangeListeners = new ArrayList<DataChangedListener>();
+	private List<DataChangeListener> dataChangeListeners = new ArrayList<DataChangeListener>();
 
 	@FXML
 	private TextField txtId;
@@ -53,7 +53,7 @@ public class DepartmentFormController implements Initializable {
 		this.service = service;
 	}
 
-	public void subscribeDataChangeListener(DataChangedListener listener) {
+	public void subscribeDataChangeListener(DataChangeListener listener) {
 		dataChangeListeners.add(listener);
 	}
 
@@ -83,7 +83,7 @@ public class DepartmentFormController implements Initializable {
 	}
 
 	private void notifyDataChangeListeners() {
-		for (DataChangedListener listener : dataChangeListeners) {
+		for (DataChangeListener listener : dataChangeListeners) {
 			listener.onDataChanged();
 		}
 

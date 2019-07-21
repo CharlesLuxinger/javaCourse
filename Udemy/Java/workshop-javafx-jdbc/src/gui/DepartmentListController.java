@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.ResourceBundle;
 
 import application.Main;
-import gui.listener.DataChangedListener;
+import gui.listener.DataChangeListener;
 import gui.util.Alerts;
 import gui.util.Utils;
 import javafx.beans.property.ReadOnlyObjectWrapper;
@@ -29,7 +29,7 @@ import javafx.stage.Stage;
 import model.entities.Department;
 import model.services.DepartmentService;
 
-public class DepartmentListController implements Initializable, DataChangedListener {
+public class DepartmentListController implements Initializable, DataChangeListener {
 
 	private DepartmentService service;
 
