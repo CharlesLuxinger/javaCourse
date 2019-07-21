@@ -3,6 +3,7 @@ package gui;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.function.Consumer;
 
 import application.Main;
 import gui.util.Alerts;
@@ -19,6 +20,8 @@ import javafx.scene.layout.VBox;
 import model.services.DepartmentService;
 
 public class MainViewController implements Initializable {
+	private Main main;
+
 	@FXML
 	private MenuItem menuItemSeller;
 
@@ -35,21 +38,22 @@ public class MainViewController implements Initializable {
 	private Hyperlink hyperlinkGitHub;
 
 	@FXML
-	private Hyperlink hyperlinkEmail;
-
-	@FXML
 	public void onMenuItemSellerAction() {
 		System.out.println("Seller");
 	}
 
 	@FXML
 	public void onMenuItemDepartmentAction() {
-		loadView2("/gui/DepartamentList.fxml");
+		loadView("/gui/DepartamentList.fxml", (DepartmentListController controller) -> {
+			controller.setDepartamentService(new DepartmentService());
+			controller.updateTableView();
+		});
 	}
 
 	@FXML
 	public void onMenuItemAboutAction() {
-		loadView("/gui/About.fxml");
+		loadView("/gui/About.fxml", x -> {
+		});
 	}
 
 	@Override
@@ -61,19 +65,16 @@ public class MainViewController implements Initializable {
 	@FXML
 	public void onHyperlinkLinkedinAction() {
 		hyperlinkLinkedin = new Hyperlink("https://www.linkedin.com/in/charlesluxinger/");
+		main.onClickOpenHyperLink(hyperlinkLinkedin);
 	}
 
 	@FXML
 	public void onHyperlinkGitHubAction() {
 		hyperlinkGitHub = new Hyperlink("https://github.com/CharlesLuxinger");
+		main.onClickOpenHyperLink(hyperlinkGitHub);
 	}
 
-	@FXML
-	public void onHyperlinkEmailAction() {
-		hyperlinkEmail = new Hyperlink("charlesluxinger@gmail.com");
-	}
-
-	private synchronized void loadView(String absoluteName) {
+	private synchronized <T> void loadView(String absoluteName, Consumer<T> initializingAction) {
 		try {
 			FXMLLoader loader = new FXMLLoader(getClass().getResource(absoluteName));
 			VBox newVBox = loader.load();
@@ -85,31 +86,13 @@ public class MainViewController implements Initializable {
 			mainVBox.getChildren().clear();
 			mainVBox.getChildren().add(mainMenu);
 			mainVBox.getChildren().addAll(newVBox.getChildren());
+			
+			T controller = loader.getController();
+			initializingAction.accept(controller);
 
 		} catch (IOException e) {
 			Alerts.showAlert("IOExcetion", "Error loading view!", e.getMessage(), AlertType.ERROR);
 		}
 	}
 
-	private synchronized void loadView2(String absoluteName) {
-		try {
-			FXMLLoader loader = new FXMLLoader(getClass().getResource(absoluteName));
-			VBox newVBox = loader.load();
-
-			Scene mainScene = Main.getMainScene();
-			VBox mainVBox = (VBox) ((ScrollPane) mainScene.getRoot()).getContent();
-
-			Node mainMenu = mainVBox.getChildren().get(0);
-			mainVBox.getChildren().clear();
-			mainVBox.getChildren().add(mainMenu);
-			mainVBox.getChildren().addAll(newVBox.getChildren());
-
-			DepartmentListController controller = loader.getController();
-			controller.setDepartamentService(new DepartmentService());
-			controller.updateTableView();
-
-		} catch (IOException e) {
-			Alerts.showAlert("IOExcetion", "Error loading view!", e.getMessage(), AlertType.ERROR);
-		}
-	}
 }
