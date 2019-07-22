@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.DepartmentListController">
+<VBox prefHeight="400.0" prefWidth="605.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.DepartmentListController">
    <children>
       <Label text="Departament Registration">
          <font>
@@ -22,16 +22,14 @@
       <ToolBar prefHeight="40.0" prefWidth="200.0">
         <items>
           <Button fx:id="btNew" mnemonicParsing="false" onAction="#onBtNewAction" prefWidth="142.0" text="New" />
-            <Button mnemonicParsing="false" prefWidth="142.0" text="Button" />
-            <Button mnemonicParsing="false" prefWidth="142.0" text="Button" />
-            <Button mnemonicParsing="false" prefWidth="142.0" text="Button" />
         </items>
       </ToolBar>
-      <TableView fx:id="tableViewDepartament" prefHeight="304.0" prefWidth="502.0">
+      <TableView fx:id="tableViewDepartament" prefHeight="304.0" prefWidth="600.0">
         <columns>
           <TableColumn fx:id="tableColumnId" prefWidth="75.0" resizable="false" text="ID" />
-          <TableColumn fx:id="tableColumnName" maxWidth="481.0" prefWidth="475.0" resizable="false" text="Name" />
-            <TableColumn fx:id="tableColumnEdit" minWidth="0.0" prefWidth="49.0" resizable="false" />
+          <TableColumn fx:id="tableColumnName" maxWidth="481.0" prefWidth="395.0" resizable="false" text="Name" />
+            <TableColumn fx:id="tableColumnEdit" minWidth="0.0" prefWidth="50.0" resizable="false" />
+            <TableColumn fx:id="tableColumnRemove" resizable="false" />
         </columns>
       </TableView>
    </children>
