@@ -9,7 +9,7 @@ import br.com.banco.modelo.Conta;
 import br.com.banco.modelo.ContaCorrente;
 import br.com.banco.modelo.ContaPoupanca;
 
-public class Teste {
+public class TesteLambda {
 
 	public static void main(String[] args) {
 
@@ -43,28 +43,19 @@ public class Teste {
 		lista.add(cc3);
 		lista.add(cc4);
 
-		lista.sort(new Comparator<Conta>() { //Classe Anonima
+		lista.sort((c1, c2) -> Integer.compare(c1.getNumero(), c2.getNumero()));
 
-			@Override
-			public int compare(Conta c1, Conta c2) {
+		Comparator<Conta> comparatorTitular = (Conta c1, Conta c2) -> {
 
-				return Integer.compare(c1.getNumero(), c2.getNumero());
+			String nomeC1 = c1.getTitular().getNome();
+			String nomeC2 = c2.getTitular().getNome();
 
-			}
-		});
-		
-		
-		Comparator<Conta> comparator = new Comparator<Conta>() { //Classe Anonima
-
-			@Override
-			public int compare(Conta c1, Conta c2) {
-
-				return Integer.compare(c1.getNumero(), c2.getNumero());
-
-			}
+			return nomeC1.compareTo(nomeC2);
 
 		};
 
+		lista.forEach( conta -> System.out.println(conta.getTitular().getNome() + ": " + conta + " Saldo: " + conta.getSaldo()));
+		
 		for (Conta conta : lista) {
 			System.out.println(conta.getTitular().getNome() + ": " + conta + " Saldo: " + conta.getSaldo());
 		}
