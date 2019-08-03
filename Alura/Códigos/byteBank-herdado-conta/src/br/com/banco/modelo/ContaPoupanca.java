@@ -5,5 +5,8 @@ public class ContaPoupanca extends Conta {
 		super(numero, agencia);
 	}
 	
-
+	@Override
+	public String toString() {
+		return "Conta Poupança: " + super.getNumero() + " Agência: " + super.getAgencia();
+	}
 }
