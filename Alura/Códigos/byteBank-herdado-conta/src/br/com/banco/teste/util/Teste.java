@@ -9,7 +9,7 @@ public class Teste {
 
 	public static void main(String[] args) {
 		
-		ArrayList lista = new ArrayList();
+		ArrayList<Conta> lista = new ArrayList<Conta>();
 		
 		Conta cc = new ContaCorrente(22, 11);
 		

@@ -1,5 +1,13 @@
 package br.com.banco.modelo;
 
+/**
+ * Estudando JavaDoc 
+ * 
+ * @author Charles
+ * @version 0.0.1
+ */
+
+
 public abstract class Conta {
 	protected double saldo;
 	private int agencia;
