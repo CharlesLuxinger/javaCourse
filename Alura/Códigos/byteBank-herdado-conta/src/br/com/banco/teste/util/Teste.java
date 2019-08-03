@@ -1,6 +1,7 @@
 package br.com.banco.teste.util;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
@@ -48,12 +49,15 @@ public class Teste {
 		}
 
 		System.out.println("----");
-		ComparaConta comparator = new ComparaConta();
-		ComparaTitularConta comparatorTitular = new ComparaTitularConta();
-		lista.sort(comparatorTitular);
+		//ComparaConta comparator = new ComparaConta();
+		
+		//lista.sort(new ComparaTitularConta());
+		
+		Collections.sort(lista);
+		Collections.reverse(lista);
 
 		for (Conta conta : lista) {
-			System.out.println(conta.getTitular().getNome() + ": " + conta);
+			System.out.println(conta.getTitular().getNome() + ": " + conta + " Saldo: " + conta.getSaldo());
 		}
 	}
 
@@ -75,13 +79,18 @@ class ComparaConta implements Comparator<Conta> {
 
 	@Override
 	public int compare(Conta c1, Conta c2) {
-		if (c1.getNumero() < c2.getNumero()) {
+		
+		return Integer.compare(c1.getNumero(), c2.getNumero());
+		
+		//return c1.getNumero() - c1.getNumero();
+		
+		/*if (c1.getNumero() < c2.getNumero()) {
 			return -1;
 		}
 		if (c1.getNumero() > c2.getNumero()) {
 			return 1;
 		}
-		return 0;
+		return 0;*/
 	}
 
 }
