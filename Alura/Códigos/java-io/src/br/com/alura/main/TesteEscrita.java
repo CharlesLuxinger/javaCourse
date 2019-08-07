@@ -12,8 +12,8 @@ public class TesteEscrita {
 	public static void main(String[] args) throws IOException {
 		// Output File
 		OutputStream file = new FileOutputStream("C:\\temp\\out.txt");
-		Writer input = new OutputStreamWriter(file);
-		BufferedWriter bw = new BufferedWriter(input);
+		Writer output = new OutputStreamWriter(file);
+		BufferedWriter bw = new BufferedWriter(output);
 
 		bw.write("1. Teste saída!!!!");
 		bw.newLine();
