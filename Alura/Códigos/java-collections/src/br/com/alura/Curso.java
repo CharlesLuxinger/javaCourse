@@ -9,6 +9,11 @@ public class Curso {
 	private String instrutor;
 
 	private List<Aula> aulas = new ArrayList<Aula>();
+	
+	public Curso(String nome, String instrutor) {
+		this.nome = nome;
+		this.instrutor = instrutor;
+	}
 
 	public Curso(String nome, String instrutor, List<Aula> aulas) {
 		this.nome = nome;
