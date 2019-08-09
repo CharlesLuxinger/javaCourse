@@ -20,8 +20,36 @@
 5. Comando para limpar a pasta target
     > mvn clean
 
-6. Comando para gerar Relatório de testes
-    > mvn surefire-report:report
+6. Comando para gerar Relatórios
+    6.1 Relatório de testes
+        > mvn surefire-report:report
+    
+    6.2 Relatório de PMD(Análise de qualidade de código) 
+        > mvn pmd:pmd
+        *Inseri na tag <build>
+        <!--Plugin de Qualidade de Código  -->
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-pmd-plugin</artifactId>
+            <version>3.12.0</version>
+            <executions>
+                <execution>
+                    <phase>verify</phase>
+                    <goals>
+                        <goal>check</goal>
+                    </goals>
+                </execution>
+            </executions>
+		</plugin>
 
 7. Comando para gerar o package
     > mvn package
+
+8.  Build Lifecycle Phases
+    8.1 validate - validar se o projeto está correto e todas as informações necessárias estão disponíveis
+    8.2 compile - compilar o código fonte do projeto
+    8.3 test - testar o código-fonte compilado usando uma estrutura de teste de unidade adequada. Esses testes não devem exigir que o código seja empacotado ou implantado
+    8.4 package - pegue o código compilado e empacote-o em seu formato distribuível, como um JAR.
+    8.5 verify - executar quaisquer verificações nos resultados dos testes de integração para garantir que os critérios de qualidade sejam atendidos
+    8.6 install - instalar o pacote no repositório local, para uso como dependência em outros projetos localmente
+    8.7 deploy - feito no ambiente de compilação, copia o pacote final para o repositório remoto para compartilhar com outros desenvolvedores e projetos.
