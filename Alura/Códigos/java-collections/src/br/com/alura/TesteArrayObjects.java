@@ -17,7 +17,13 @@ public class TesteArrayObjects {
 		Collections.sort(list);
 
 		Collections.sort(list, Comparator.comparing(Aula::getTempo));
-		
+
 		list.sort(Comparator.comparing(Aula::getTempo));
+
+		Curso curso = new Curso("Padeiro", "Manuel", Arrays.asList(aula1, aula2));
+		
+		//curso.getAulas().add(aula1); Não é permitido pelo metodo Collections.unmodifiableList inserido no get
+		
+		curso.adicionaAula(aula1);
 	}
 }
