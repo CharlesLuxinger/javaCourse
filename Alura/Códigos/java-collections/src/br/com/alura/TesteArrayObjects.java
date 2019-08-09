@@ -9,6 +9,7 @@ public class TesteArrayObjects {
 	public static void main(String[] args) {
 		Aula aula1 = new Aula("Teste 1", 15);
 		Aula aula2 = new Aula("Teste 2", 21);
+		Aula aula3 = new Aula("Teste 2", 21);
 
 		ArrayList<Aula> list = new ArrayList<Aula>(Arrays.asList(aula1, aula2));
 
@@ -21,9 +22,14 @@ public class TesteArrayObjects {
 		list.sort(Comparator.comparing(Aula::getTempo));
 
 		Curso curso = new Curso("Padeiro", "Manuel", Arrays.asList(aula1, aula2));
+
+		// curso.getAulas().add(aula3); Não é permitido pelo metodo
+		// Collections.unmodifiableList inserido no get
+
+		curso.adicionaAula(aula3);
 		
-		//curso.getAulas().add(aula1); Não é permitido pelo metodo Collections.unmodifiableList inserido no get
+		//Usando Stream para soma de total.
+		System.out.println(curso.getTempoTotal());
 		
-		curso.adicionaAula(aula1);
 	}
 }
