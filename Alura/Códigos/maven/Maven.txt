@@ -13,6 +13,9 @@
 4. Comando para compilar através do MVN 
     > mvn compile
     > mvn test
+    4.1 Comando para compilar através do MVN offline(Não atualiza às dependências) 
+    > mvn -o compile
+    > mvn -o test
 
 5. Comando para limpar a pasta target
     > mvn clean
