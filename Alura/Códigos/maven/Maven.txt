@@ -25,3 +25,6 @@
 
 8. Comando para Start o servidor Jetty
     > mvn jetty:run
+
+9. Comando para descompactar arquivos .jar ou .war
+    > unzip -l arquivo.jar
