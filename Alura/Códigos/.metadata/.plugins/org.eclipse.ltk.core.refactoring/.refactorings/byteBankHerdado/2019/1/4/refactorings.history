@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename field &apos;util&apos; in &apos;byteBankHerdado.Cliente&apos; to &apos;autenticador&apos;&#x0D;&#x0A;- Original project: &apos;byteBankHerdado&apos;&#x0D;&#x0A;- Original element: &apos;byteBankHerdado.Cliente.util&apos;&#x0D;&#x0A;- Renamed element: &apos;byteBankHerdado.Cliente.autenticador&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" delegate="false" deprecate="false" description="Rename field &apos;util&apos;" flags="589826" getter="false" id="org.eclipse.jdt.ui.rename.field" input="/src&lt;byteBankHerdado{Cliente.java[Cliente^util" name="autenticador" references="true" setter="false" stamp="1548112310346" textual="false" version="1.0"/>
-</session>
