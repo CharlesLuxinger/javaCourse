@@ -1,6 +1,0 @@
-package model.services;
-
-public interface ServicoPagamento {
-	double taxaPagamento (double taxa);
-	double interest (double valorContrato, int quantidadeParcelas);
-}

@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Convert local variable &apos;gui.ViewController.onBtShowAllAction().text&apos; in &apos;gui.ViewController.onBtShowAllAction()&apos; to field&#x0D;&#x0A;- Original project: &apos;javaFX7&apos;&#x0D;&#x0A;- Original element: &apos;gui.ViewController.onBtShowAllAction().text&apos;&#x0D;&#x0A;- Field name: &apos;text&apos;&#x0D;&#x0A;- Initialize field in method&#x0D;&#x0A;- Declared visibility: &apos;private&apos;" description="Convert local variable &apos;text&apos; to field" final="false" flags="2" id="org.eclipse.jdt.ui.promote.temp" initialize="1" input="/src&lt;gui{ViewController.java" name="text" selection="993 11" stamp="1563652254940" static="false" version="1.0" visibility="2"/>
-</session>

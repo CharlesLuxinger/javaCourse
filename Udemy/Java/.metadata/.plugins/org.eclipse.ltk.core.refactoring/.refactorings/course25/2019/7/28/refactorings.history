@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Copy 2 packages to &apos;course48/src&apos;&#x0D;&#x0A;- Original project: &apos;course25&apos;&#x0D;&#x0A;- Destination element: &apos;course48/src&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     course25/src/entities.enums&#x0D;&#x0A;     course25/src/entities" description="Copy packages" destination="=course48/src" element1="/src&lt;entities.enums" element2="/src&lt;entities" flags="589830" fragments="2" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1563059276626" version="1.0"/>
-</session>

@@ -1,6 +1,0 @@
-package model.entities;
-
-public class PayPal {
-	private Double jurosPorMes = 1.0;  
-	private Double taxaPorPagamento = 2.0;
-}
