@@ -1,5 +1,7 @@
 package br.com.charles.designpattern.interpreter;
 
+import br.com.charles.designpattern.visitor.Visitor;
+
 public class Numero implements Expressao {
 	private int numero;
 
@@ -11,4 +13,14 @@ public class Numero implements Expressao {
 	public int avalia() {
 		return numero;
 	}
+
+	public int getNumero() {
+		return this.numero;
+	}
+
+	@Override
+	public void acceptVisitor(Visitor visitor) {
+		visitor.imprimiNumero(this);
+	}
+
 }
