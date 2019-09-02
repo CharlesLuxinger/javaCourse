@@ -1,5 +1,7 @@
 package br.com.charles.designpattern.strategy;
 
+import br.com.charles.designpattern.chainofresponsibility.Orcamento;
+
 public class TestCalcImposto {
 
 	public static void main(String[] args) {
