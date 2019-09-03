@@ -1,0 +1,8 @@
+Resumo Solid
+
+1. Single Responsibility Principle
+    > Princípio da Responsabilidade Única. A tradução disso, de maneira simples, é coesão. Uma classe coesa é aquela que contém apenas uma única responsabilidade. Ou seja, ela toma conta de apenas um conceito dentro do sistema.
+    Classes coesas tendem a ser menores, e por consequência, mais fáceis de serem lidas e mantidas. Elas também tendem a ser mais reutilizáveis, afinal são mais fáceis.
+
+2. Interface Segregation Principle
+    > Princípio de Segregação de Interfaces. Se a interface mudar, a mudança tende a ser propagada em menos pontos. Lembre-se que a nossa ideia é diminuir ao máximo a quantidade de pontos de mudança.
