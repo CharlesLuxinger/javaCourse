@@ -11,3 +11,9 @@ Resumo Solid
     > Eferente: Classes dependo de outras
 
     > Aferente: Mostra quem depende de uma determinada classe.
+
+4. Open Closed Principle
+    > A ideia é que as classes sejam abertas para extensão. Ou seja, que seja possível estendê-la, ou seja, mudar o comportamento dela, de maneira fácil. Mas ela tem que estar fechada para alteração. Ou seja, eu não tenho que ficar o tempo inteiro indo nela pra mexer um if a mais, para fazer uma modificação ou coisa do tipo. Então, de novo, fechada para modificação, ou seja, eu não quero ter que o tempo inteiro entrar nela e sair escrevendo código, mas ela tem que estar aberta para extensão, ou seja, eu tenho que conseguir mudar a execução dela ao longo do tempo.
+
+5. Dependency Inversion Principles
+    > A ideia é: sempre que uma classe for depender, depende de uma classe mais estável. Então, A* depende de *B, a ideia é que B* seja mais estável que *A. Mas B* depende de *C. Então, a ideia e que C* seja mais estável que *B. A ideia é que você sempre passe a depender de modos mais estáveis que você. Se está numa abstração, a ideia é de que a abstração não conheça a implementação. E a abstração, por sua vez, ela só pode conhecer outras abstrações. A ideia é que ela não conheça detalhes de implementação.
