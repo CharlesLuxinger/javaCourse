@@ -6,3 +6,8 @@ Resumo Solid
 
 2. Interface Segregation Principle
     > Princípio de Segregação de Interfaces. Se a interface mudar, a mudança tende a ser propagada em menos pontos. Lembre-se que a nossa ideia é diminuir ao máximo a quantidade de pontos de mudança.
+
+3. Acoplamento 
+    > Eferente: Classes dependo de outras
+
+    > Aferente: Mostra quem depende de uma determinada classe.
