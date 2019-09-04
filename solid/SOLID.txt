@@ -24,3 +24,6 @@ Resumo Solid
 7. Lei de Demeter
     > Evite ao máximo fazer expressões como a.getB().getC().getD().acao(). O problema dessa cadeia, é que a classe que contém essa expressão, conhece muito sobre o comportamento da classe A, depois da classe B, até D. Se alguma delas mudar, a mudança será propagada para muitos lugares.
     Diminuir a quantidade de invocações como essas ajuda a encapsular melhor o comportamento e o funcionamento interno das classes.
+
+8. Liskov Subtitutive Principle
+    > Para usar herança de maneira decente, tem que pensar muito nas pré-condições e muito nas pós-condições. Nunca posso apertar uma pré-condição. E eu nunca posso afrouxar uma pós-condição. 
