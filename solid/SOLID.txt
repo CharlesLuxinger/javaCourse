@@ -17,3 +17,10 @@ Resumo Solid
 
 5. Dependency Inversion Principles
     > A ideia é: sempre que uma classe for depender, depende de uma classe mais estável. Então, A* depende de *B, a ideia é que B* seja mais estável que *A. Mas B* depende de *C. Então, a ideia e que C* seja mais estável que *B. A ideia é que você sempre passe a depender de modos mais estáveis que você. Se está numa abstração, a ideia é de que a abstração não conheça a implementação. E a abstração, por sua vez, ela só pode conhecer outras abstrações. A ideia é que ela não conheça detalhes de implementação.
+
+6. Encapsular
+    > Esconder os detalhes da implementação dentro da classe. Dessa forma, as classes que farão uso dela, não saberão como ela funciona internamente. A vantagem disso é que conseguimos depois facilmente alterar a implementação, sem que ela impacte nas classes dependentes.
+
+7. Lei de Demeter
+    > Evite ao máximo fazer expressões como a.getB().getC().getD().acao(). O problema dessa cadeia, é que a classe que contém essa expressão, conhece muito sobre o comportamento da classe A, depois da classe B, até D. Se alguma delas mudar, a mudança será propagada para muitos lugares.
+    Diminuir a quantidade de invocações como essas ajuda a encapsular melhor o comportamento e o funcionamento interno das classes.
