@@ -4,6 +4,7 @@ import static org.junit.Assert.assertEquals;
 
 import java.time.LocalDateTime;
 
+import org.junit.Assert;
 import org.junit.Test;
 
 public class NegociacaoTest {
@@ -31,4 +32,12 @@ public class NegociacaoTest {
 
 		assertEquals(preco * quantidade, negociacao.getVolume(), 0.01);
 	}
+
+	@Test
+	public void mesmoDia() {
+		Negociacao negociacao = new Negociacao(100, 1, LocalDateTime.now());
+
+		Assert.assertTrue(negociacao.dateIsEqual(LocalDateTime.now()));
+	}
+
 }

@@ -77,4 +77,11 @@ public final class Negociacao {
 		}
 		return true;
 	}
+
+	public boolean dateIsEqual(LocalDateTime date) {
+
+		return this.dataHora.getDayOfMonth() == date.getDayOfMonth() 
+				&& this.dataHora.getMonth() == date.getMonth()
+				&& this.dataHora.getYear() == date.getYear();
+	}
 }

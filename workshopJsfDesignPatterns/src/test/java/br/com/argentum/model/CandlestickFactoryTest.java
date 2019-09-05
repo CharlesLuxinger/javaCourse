@@ -61,4 +61,43 @@ public class CandlestickFactoryTest {
 		Assert.assertEquals(0.0, candlestick.getFechamento(), 0.01);
 		Assert.assertEquals(0.0, candlestick.getVolume(), 0.01);
 	}
+
+	@Test
+	public void negociacaoComDatasDiferentesGeraCandlesDiferentes() {
+		LocalDateTime hoje = LocalDateTime.now();
+
+		Negociacao negociacao1 = new Negociacao(50.0, 20, hoje);
+		Negociacao negociacao2 = new Negociacao(100.0, 20, hoje);
+		Negociacao negociacao3 = new Negociacao(150.0, 20, hoje);
+
+		LocalDateTime amanha = hoje.plusDays(1);
+
+		Negociacao negociacao4 = new Negociacao(50.0, 100, amanha);
+		Negociacao negociacao5 = new Negociacao(10.0, 20, amanha);
+
+		LocalDateTime depois = amanha.plusDays(1);
+
+		Negociacao negociacao6 = new Negociacao(35.0, 20, depois);
+		Negociacao negociacao7 = new Negociacao(35.0, 20, depois);
+
+		List<Negociacao> negociacoes = Arrays.asList(negociacao1, negociacao2, negociacao3, negociacao4, negociacao5,
+				negociacao6, negociacao7);
+
+		CandlestickFactory cFactory = new CandlestickFactory();
+
+		List<Candlestick> candlesticks = cFactory.getCandlestick(negociacoes);
+
+		Assert.assertEquals(3, candlesticks.size());
+
+		Assert.assertTrue(negociacoes.get(0).dateIsEqual(candlesticks.get(0).getDataHora()));
+		Assert.assertTrue(negociacoes.get(3).dateIsEqual(candlesticks.get(1).getDataHora()));
+		Assert.assertTrue(negociacoes.get(5).dateIsEqual(candlesticks.get(2).getDataHora()));
+
+		Assert.assertEquals(6000.0, candlesticks.get(0).getVolume(), 0.0000001);
+		Assert.assertEquals(50.0, candlesticks.get(0).getMinimo(), 0.0000001);
+		Assert.assertEquals(150.0, candlesticks.get(0).getMaximo(), 0.0000001);
+		Assert.assertEquals(50.0, candlesticks.get(0).getAbertura(), 0.0000001);
+		Assert.assertEquals(150.0, candlesticks.get(0).getFechamento(), 0.0000001);
+
+	}
 }
