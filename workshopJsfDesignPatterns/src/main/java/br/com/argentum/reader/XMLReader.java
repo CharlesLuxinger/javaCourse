@@ -1,6 +1,7 @@
 package br.com.argentum.reader;
 
-import java.time.LocalDateTime;
+import java.io.InputStream;
+import java.util.List;
 
 import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.io.xml.DomDriver;
@@ -9,13 +10,13 @@ import br.com.argentum.model.Negociacao;
 import br.com.argentum.sxtream.LocalDateTimeConverterSX;
 
 public class XMLReader {
-	public static void main(String[] args) {
-		Negociacao negociacao = new Negociacao(150, 5, LocalDateTime.now());
 
+	@SuppressWarnings("unchecked")
+	public List<Negociacao> getNegociacoesFromXML(InputStream inputStream) {
 		XStream xStream = new XStream(new DomDriver());
 		xStream.registerLocalConverter(Negociacao.class, "dataHora", new LocalDateTimeConverterSX());
-		String xml = xStream.toXML(negociacao);
+		xStream.alias("negociacao", Negociacao.class);
 
-		System.out.println(xml);
+		return (inputStream != null ? (List<Negociacao>) xStream.fromXML(inputStream) : null);
 	}
 }
