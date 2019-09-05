@@ -19,10 +19,10 @@ public class XMLReaderTest {
 						+ "  <negociacao>\n"
 						+ "    <preco>500.0</preco>\n"
 						+ "    <quantidade>1</quantidade>\n"
-						+ "    <dataHora>\n"
+						+ "    <data>\n"
 						+ "      <time>1567712250000</time>\n"
 						+ "      <timezone>America/Sao_Paulo</timezone>\n"
-						+ "    </dataHora>\n"
+						+ "    </data>\n"
 						+ "  </negociacao>\n"
 						+ "</list>";
 

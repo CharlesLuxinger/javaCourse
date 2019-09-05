@@ -9,7 +9,6 @@ import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.io.xml.DomDriver;
 
 import br.com.argentum.model.Negociacao;
-import br.com.argentum.sxtream.LocalDateTimeConverterSX;
 
 public class LocalDateTimeConverterSXTest {
 
@@ -19,17 +18,17 @@ public class LocalDateTimeConverterSXTest {
 
 		XStream xStream = new XStream(new DomDriver());
 		xStream.alias("negociacao", Negociacao.class);
-		xStream.registerLocalConverter(Negociacao.class, "dataHora", new LocalDateTimeConverterSX());
+		xStream.registerLocalConverter(Negociacao.class, "data", new LocalDateTimeConverterSX());
 		String xmlConverted = xStream.toXML(negociacao);
 
 		String xmlExpected =
 				"<negociacao>\n"
 						+ "  <preco>500.0</preco>\n"
 						+ "  <quantidade>1</quantidade>\n"
-						+ "  <dataHora>\n"
+						+ "  <data>\n"
 						+ "    <time>1567712250000</time>\n"
 						+ "    <timezone>America/Sao_Paulo</timezone>\n"
-						+ "  </dataHora>\n"
+						+ "  </data>\n"
 						+ "</negociacao>";
 
 		Assert.assertEquals(xmlExpected, xmlConverted);
@@ -41,15 +40,15 @@ public class LocalDateTimeConverterSXTest {
 				"<negociacao>\n"
 						+ "  <preco>500.0</preco>\n"
 						+ "  <quantidade>1</quantidade>\n"
-						+ "  <dataHora>\n"
+						+ "  <data>\n"
 						+ "    <time>1567712250000</time>\n"
 						+ "    <timezone>America/Sao_Paulo</timezone>\n"
-						+ "  </dataHora>\n"
+						+ "  </data>\n"
 						+ "</negociacao>";
 
 		XStream xStream = new XStream(new DomDriver());
 		xStream.alias("negociacao", Negociacao.class);
-		xStream.registerLocalConverter(Negociacao.class, "dataHora", new LocalDateTimeConverterSX());
+		xStream.registerLocalConverter(Negociacao.class, "data", new LocalDateTimeConverterSX());
 
 		Negociacao negociacaoConverted = (Negociacao) xStream.fromXML(xml);
 		Negociacao negociacaoExpected = new Negociacao(500, 1, LocalDateTime.of(2019, 9, 5, 16, 37, 30));
