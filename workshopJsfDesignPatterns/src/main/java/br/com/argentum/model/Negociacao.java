@@ -5,21 +5,21 @@ import java.time.LocalDateTime;
 public final class Negociacao {
 	private final double preco;
 	private final int quantidade;
-	private final LocalDateTime dataHora;
+	private final LocalDateTime data;
 
-	public Negociacao(double preco, int quantidade, LocalDateTime dataHora) {
+	public Negociacao(double preco, int quantidade, LocalDateTime data) {
 		if (preco < 0) {
 			throw new IllegalArgumentException("Preço não poder ser negativo.");
 		}
 		if (quantidade <= 0) {
 			throw new IllegalArgumentException("Quantidade não poder ser menor ou igual a zero.");
 		}
-		if (dataHora == null) {
+		if (data == null) {
 			throw new IllegalArgumentException("A data deve ser informada.");
 		}
 		this.preco = preco;
 		this.quantidade = quantidade;
-		this.dataHora = dataHora;
+		this.data = data;
 	}
 
 	public double getPreco() {
@@ -30,8 +30,8 @@ public final class Negociacao {
 		return quantidade;
 	}
 
-	public LocalDateTime getDataHora() {
-		return dataHora;
+	public LocalDateTime getData() {
+		return data;
 	}
 
 	public double getVolume() {
@@ -42,7 +42,7 @@ public final class Negociacao {
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((dataHora == null) ? 0 : dataHora.hashCode());
+		result = prime * result + ((data == null) ? 0 : data.hashCode());
 		long temp;
 		temp = Double.doubleToLongBits(preco);
 		result = prime * result + (int) (temp ^ (temp >>> 32));
@@ -62,11 +62,11 @@ public final class Negociacao {
 			return false;
 		}
 		Negociacao other = (Negociacao) obj;
-		if (dataHora == null) {
-			if (other.dataHora != null) {
+		if (data == null) {
+			if (other.data != null) {
 				return false;
 			}
-		} else if (!dataHora.equals(other.dataHora)) {
+		} else if (!data.equals(other.data)) {
 			return false;
 		}
 		if (Double.doubleToLongBits(preco) != Double.doubleToLongBits(other.preco)) {
@@ -80,8 +80,7 @@ public final class Negociacao {
 
 	public boolean dateIsEqual(LocalDateTime date) {
 
-		return this.dataHora.getDayOfMonth() == date.getDayOfMonth() 
-				&& this.dataHora.getMonth() == date.getMonth()
-				&& this.dataHora.getYear() == date.getYear();
+		return this.data.getDayOfMonth() == date.getDayOfMonth() && this.data.getMonth() == date.getMonth()
+				&& this.data.getYear() == date.getYear();
 	}
 }

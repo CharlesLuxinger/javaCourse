@@ -40,7 +40,7 @@ public class CandlestickFactory {
 			List<Candlestick> candlesticks = new ArrayList<Candlestick>();
 			List<Negociacao> negociacoesDoDia = new ArrayList<Negociacao>();
 
-			LocalDateTime dataAtual = negociacoes.get(0).getDataHora();
+			LocalDateTime dataAtual = negociacoes.get(0).getData();
 
 			for (Negociacao negociacao : negociacoes) {
 				if (negociacao.dateIsEqual(dataAtual)) {
@@ -49,7 +49,7 @@ public class CandlestickFactory {
 					candlestick = getCandlestickByDate(negociacoesDoDia, dataAtual);
 					candlesticks.add(candlestick);
 					negociacoesDoDia = new ArrayList<Negociacao>();
-					dataAtual = negociacao.getDataHora();
+					dataAtual = negociacao.getData();
 				}
 			}
 

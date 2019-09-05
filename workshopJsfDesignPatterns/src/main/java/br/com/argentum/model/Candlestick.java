@@ -9,14 +9,14 @@ public final class Candlestick {
 	private final double maximo;
 	private final double minimo;
 	private final double volume;
-	private final LocalDateTime dataHora;
+	private final LocalDateTime data;
 
 	public Candlestick(double abertura, double fechamento, double maximo, double minimo, double volume,
-			LocalDateTime dataHora) {
+			LocalDateTime data) {
 		if (maximo < minimo) {
 			throw new IllegalArgumentException("O valor máximo não pode ser inferior ao mínimo");
 		}
-		if (dataHora == null) {
+		if (data == null) {
 			throw new IllegalArgumentException("A data não pode ser nula");
 		}
 		if (maximo < 0 || minimo < 0 || abertura < 0 || fechamento < 0 || volume < 0) {
@@ -28,7 +28,7 @@ public final class Candlestick {
 		this.maximo = maximo;
 		this.minimo = minimo;
 		this.volume = volume;
-		this.dataHora = dataHora;
+		this.data = data;
 	}
 
 	public double getAbertura() {
@@ -51,8 +51,8 @@ public final class Candlestick {
 		return volume;
 	}
 
-	public LocalDateTime getDataHora() {
-		return dataHora;
+	public LocalDateTime getData() {
+		return data;
 	}
 
 	public boolean isAlta() {

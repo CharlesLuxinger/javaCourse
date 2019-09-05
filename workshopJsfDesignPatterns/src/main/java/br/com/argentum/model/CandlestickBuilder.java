@@ -8,10 +8,10 @@ public class CandlestickBuilder {
 	private double maximo;
 	private double minimo;
 	private double volume;
-	private LocalDateTime dataHora;
+	private LocalDateTime data;
 
 	public Candlestick build() {
-		return new Candlestick(abertura, fechamento, maximo, minimo, volume, dataHora);
+		return new Candlestick(abertura, fechamento, maximo, minimo, volume, data);
 	}
 
 	public CandlestickBuilder setAbertura(double abertura) {
@@ -39,8 +39,8 @@ public class CandlestickBuilder {
 		return this;
 	}
 
-	public CandlestickBuilder setDataHora(LocalDateTime dataHora) {
-		this.dataHora = dataHora;
+	public CandlestickBuilder setData(LocalDateTime data) {
+		this.data = data;
 		return this;
 	}
 }

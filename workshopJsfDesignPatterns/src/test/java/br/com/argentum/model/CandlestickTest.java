@@ -12,7 +12,7 @@ public class CandlestickTest {
 
 		@SuppressWarnings("unused")
 		Candlestick candlestick = builder.setAbertura(10.0).setFechamento(15).setMinimo(20).setMaximo(15)
-				.setDataHora(LocalDateTime.now()).setVolume(150).build();
+		.setData(LocalDateTime.now()).setVolume(150).build();
 	}
 
 	@Test(expected = IllegalArgumentException.class)
@@ -21,7 +21,7 @@ public class CandlestickTest {
 
 		@SuppressWarnings("unused")
 		Candlestick candlestick = builder.setAbertura(10.0).setFechamento(15).setMinimo(20).setMaximo(15)
-				.setDataHora(null).setVolume(150).build();
+		.setData(null).setVolume(150).build();
 	}
 
 	@Test(expected = IllegalArgumentException.class)
@@ -30,7 +30,7 @@ public class CandlestickTest {
 
 		@SuppressWarnings("unused")
 		Candlestick candlestick = builder.setAbertura(-1.0).setFechamento(-1.0).setMinimo(-1.0).setMaximo(-1.0)
-				.setDataHora(LocalDateTime.now()).setVolume(-1.0).build();
+		.setData(LocalDateTime.now()).setVolume(-1.0).build();
 	}
 
 }

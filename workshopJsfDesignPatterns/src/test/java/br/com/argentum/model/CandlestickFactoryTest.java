@@ -89,9 +89,9 @@ public class CandlestickFactoryTest {
 
 		Assert.assertEquals(3, candlesticks.size());
 
-		Assert.assertTrue(negociacoes.get(0).dateIsEqual(candlesticks.get(0).getDataHora()));
-		Assert.assertTrue(negociacoes.get(3).dateIsEqual(candlesticks.get(1).getDataHora()));
-		Assert.assertTrue(negociacoes.get(5).dateIsEqual(candlesticks.get(2).getDataHora()));
+		Assert.assertTrue(negociacoes.get(0).dateIsEqual(candlesticks.get(0).getData()));
+		Assert.assertTrue(negociacoes.get(3).dateIsEqual(candlesticks.get(1).getData()));
+		Assert.assertTrue(negociacoes.get(5).dateIsEqual(candlesticks.get(2).getData()));
 
 		Assert.assertEquals(6000.0, candlesticks.get(0).getVolume(), 0.0000001);
 		Assert.assertEquals(50.0, candlesticks.get(0).getMinimo(), 0.0000001);

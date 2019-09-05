@@ -14,7 +14,7 @@ public class XMLReader {
 	@SuppressWarnings("unchecked")
 	public List<Negociacao> getNegociacoesFromXML(InputStream inputStream) {
 		XStream xStream = new XStream(new DomDriver());
-		xStream.registerLocalConverter(Negociacao.class, "dataHora", new LocalDateTimeConverterSX());
+		xStream.registerLocalConverter(Negociacao.class, "data", new LocalDateTimeConverterSX());
 		xStream.alias("negociacao", Negociacao.class);
 
 		return (inputStream != null ? (List<Negociacao>) xStream.fromXML(inputStream) : null);
