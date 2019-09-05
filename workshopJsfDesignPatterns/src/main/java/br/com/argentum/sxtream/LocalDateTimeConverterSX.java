@@ -1,4 +1,4 @@
-package br.com.argentum.xtream;
+package br.com.argentum.sxtream;
 
 import java.time.Instant;
 import java.time.LocalDateTime;

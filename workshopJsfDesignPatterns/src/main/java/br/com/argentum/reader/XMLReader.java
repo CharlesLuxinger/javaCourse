@@ -6,7 +6,7 @@ import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.io.xml.DomDriver;
 
 import br.com.argentum.model.Negociacao;
-import br.com.argentum.xtream.LocalDateTimeConverterSX;
+import br.com.argentum.sxtream.LocalDateTimeConverterSX;
 
 public class XMLReader {
 	public static void main(String[] args) {

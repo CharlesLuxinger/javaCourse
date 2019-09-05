@@ -3,7 +3,6 @@ package br.com.argentum.model;
 import java.time.LocalDateTime;
 
 public final class Negociacao {
-
 	private final double preco;
 	private final int quantidade;
 	private final LocalDateTime dataHora;
@@ -39,4 +38,43 @@ public final class Negociacao {
 		return this.preco * this.quantidade;
 	}
 
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((dataHora == null) ? 0 : dataHora.hashCode());
+		long temp;
+		temp = Double.doubleToLongBits(preco);
+		result = prime * result + (int) (temp ^ (temp >>> 32));
+		result = prime * result + quantidade;
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj) {
+			return true;
+		}
+		if (obj == null) {
+			return false;
+		}
+		if (getClass() != obj.getClass()) {
+			return false;
+		}
+		Negociacao other = (Negociacao) obj;
+		if (dataHora == null) {
+			if (other.dataHora != null) {
+				return false;
+			}
+		} else if (!dataHora.equals(other.dataHora)) {
+			return false;
+		}
+		if (Double.doubleToLongBits(preco) != Double.doubleToLongBits(other.preco)) {
+			return false;
+		}
+		if (quantidade != other.quantidade) {
+			return false;
+		}
+		return true;
+	}
 }
