@@ -24,8 +24,10 @@ public class CandlestickFactory {
 
 			for (Negociacao negociacao : negociacoes) {
 				volume += negociacao.getVolume();
-				minimo = (negociacao.getPreco() < minimo ? negociacao.getPreco() : minimo);
-				maximo = (negociacao.getPreco() > maximo ? negociacao.getPreco() : maximo);
+				double preco = negociacao.getPreco();
+
+				minimo = (preco < minimo ? preco : minimo);
+				maximo = (preco > maximo ? preco : maximo);
 
 			}
 		}
@@ -35,8 +37,6 @@ public class CandlestickFactory {
 
 	public List<Candlestick> getCandlestick(List<Negociacao> negociacoes) {
 		if (!negociacoes.isEmpty()) {
-			Candlestick candlestick;
-
 			List<Candlestick> candlesticks = new ArrayList<Candlestick>();
 			List<Negociacao> negociacoesDoDia = new ArrayList<Negociacao>();
 
@@ -46,18 +46,21 @@ public class CandlestickFactory {
 				if (negociacao.dateIsEqual(dataAtual)) {
 					negociacoesDoDia.add(negociacao);
 				} else {
-					candlestick = getCandlestickByDate(negociacoesDoDia, dataAtual);
-					candlesticks.add(candlestick);
+					addCandle(candlesticks, negociacoesDoDia, dataAtual);
+
 					negociacoesDoDia = new ArrayList<Negociacao>();
 					dataAtual = negociacao.getData();
 				}
 			}
 
-			candlestick = getCandlestickByDate(negociacoesDoDia, dataAtual);
-			candlesticks.add(candlestick);
+			addCandle(candlesticks, negociacoesDoDia, dataAtual);
 
 			return candlesticks;
 		}
 		return null;
+	}
+
+	private void addCandle(List<Candlestick> candlesticks, List<Negociacao> negociacoesDoDia, LocalDateTime dataAtual) {
+		candlesticks.add(getCandlestickByDate(negociacoesDoDia, dataAtual));
 	}
 }
